@@ -87,12 +87,4 @@
   .text-gradient {
     @apply bg-gradient-to-r from-sapphire-600 to-sapphire-400 bg-clip-text text-transparent;
   }
-  
-  .hist-shadow {
-    box-shadow: 0 20px 25px -5px rgba(30, 64, 175, 0.1), 0 10px 10px -5px rgba(30, 64, 175, 0.04);
-  }
-  
-  .hist-glow {
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
-  }
 }
