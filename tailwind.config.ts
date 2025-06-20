@@ -54,23 +54,35 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				// Custom HIST Brand Colors
-				sapphire: {
-					50: '#eff6ff',
-					100: '#dbeafe',
-					200: '#bfdbfe',
-					300: '#93c5fd',
-					400: '#60a5fa',
-					500: '#3b82f6',
-					600: '#2563eb',
-					700: '#1d4ed8',
-					800: '#1e40af',
-					900: '#1e3a8a',
-					950: '#172554'
-				},
 				'hist-blue': {
-					DEFAULT: '#1e40af',
-					light: '#3b82f6',
-					dark: '#1e3a8a'
+					DEFAULT: '#5069B1',
+					light: '#6B7FBF',
+					dark: '#3D4F8A',
+					50: '#F0F3FF',
+					100: '#E1E8FF',
+					200: '#C3D1FF',
+					300: '#A5BAFF',
+					400: '#8DA7FF',
+					500: '#5069B1',
+					600: '#4559A0',
+					700: '#3A4A8F',
+					800: '#2F3A7E',
+					900: '#242B6D'
+				},
+				'hist-yellow': {
+					DEFAULT: '#FBD506',
+					light: '#FCDD33',
+					dark: '#D4B505',
+					50: '#FFFCE0',
+					100: '#FFF9C2',
+					200: '#FFF385',
+					300: '#FFED47',
+					400: '#FFE70A',
+					500: '#FBD506',
+					600: '#D4B505',
+					700: '#AD9304',
+					800: '#867103',
+					900: '#5F4F02'
 				}
 			},
 			borderRadius: {
@@ -80,6 +92,7 @@ export default {
 			},
 			fontFamily: {
 				sans: ['Inter', 'system-ui', 'sans-serif'],
+				allstar: ['Allstar4', 'Inter', 'system-ui', 'sans-serif'],
 			},
 			keyframes: {
 				'accordion-down': {
@@ -97,38 +110,17 @@ export default {
 					to: {
 						height: '0'
 					}
-				},
-				'fade-in': {
-					'0%': {
-						opacity: '0',
-						transform: 'translateY(10px)'
-					},
-					'100%': {
-						opacity: '1',
-						transform: 'translateY(0)'
-					}
-				},
-				'slide-in-right': {
-					'0%': { transform: 'translateX(100%)' },
-					'100%': { transform: 'translateX(0)' }
-				},
-				'float': {
-					'0%, 100%': { transform: 'translateY(0px)' },
-					'50%': { transform: 'translateY(-10px)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 0.6s ease-out',
-				'slide-in-right': 'slide-in-right 0.3s ease-out',
-				'float': 'float 3s ease-in-out infinite'
+				'accordion-up': 'accordion-up 0.2s ease-out'
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 				'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-				'hist-gradient': 'linear-gradient(135deg, #1e40af 0%, #3b82f6 100%)',
-				'hero-pattern': 'linear-gradient(135deg, rgba(30, 64, 175, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%)'
+				'hist-gradient': 'linear-gradient(135deg, #5069B1 0%, #6B7FBF 100%)',
+				'hero-pattern': 'linear-gradient(135deg, rgba(80, 105, 177, 0.1) 0%, rgba(107, 127, 191, 0.05) 100%)'
 			}
 		}
 	},

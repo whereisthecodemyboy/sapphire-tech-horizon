@@ -28,7 +28,7 @@ const Footer = () => {
       <div className="border-b border-gray-800">
         <div className="container mx-auto px-4 py-12">
           <div className="max-w-4xl mx-auto text-center">
-            <h3 className="text-2xl font-bold mb-4">
+            <h3 className="text-2xl font-bold mb-4 font-allstar">
               Stay Updated with HIST
             </h3>
             <p className="text-gray-300 mb-8">
@@ -38,7 +38,7 @@ const Footer = () => {
               <input 
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-sapphire-500 focus:border-transparent"
+                className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-hist-blue focus:border-transparent"
               />
               <button className="px-6 py-3 bg-hist-gradient rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
                 Subscribe
@@ -54,11 +54,11 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 bg-hist-gradient rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">H</span>
+              <div className="w-12 h-12 bg-hist-gradient rounded-xl flex items-center justify-center shadow-lg">
+                <span className="text-white font-bold text-xl font-allstar">H</span>
               </div>
               <div>
-                <h1 className="text-xl font-bold">HIST</h1>
+                <h1 className="text-xl font-bold font-allstar">HIST</h1>
                 <p className="text-xs text-gray-400 leading-none">House of Information Science and Technology</p>
               </div>
             </div>
@@ -70,15 +70,15 @@ const Footer = () => {
             
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <MapPin className="w-5 h-5 text-sapphire-400" />
+                <MapPin className="w-5 h-5 text-hist-yellow" />
                 <span className="text-gray-300">Kritipur, Kathmandu, Nepal</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-sapphire-400" />
+                <Phone className="w-5 h-5 text-hist-yellow" />
                 <span className="text-gray-300">+977-1-XXXXXXX</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Calendar className="w-5 h-5 text-sapphire-400" />
+                <Calendar className="w-5 h-5 text-hist-yellow" />
                 <span className="text-gray-300">info@hist.com.np</span>
               </div>
             </div>
@@ -92,7 +92,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <a 
                     href={link.href}
-                    className="text-gray-300 hover:text-sapphire-400 transition-colors"
+                    className="text-gray-300 hover:text-hist-yellow transition-colors"
                   >
                     {link.name}
                   </a>
@@ -107,7 +107,7 @@ const Footer = () => {
             <ul className="space-y-3">
               {services.map((service) => (
                 <li key={service}>
-                  <span className="text-gray-300 hover:text-sapphire-400 transition-colors cursor-pointer">
+                  <span className="text-gray-300 hover:text-hist-yellow transition-colors cursor-pointer">
                     {service}
                   </span>
                 </li>
@@ -126,13 +126,13 @@ const Footer = () => {
             </div>
             
             <div className="flex space-x-6">
-              <a href="#" className="text-gray-400 hover:text-sapphire-400 transition-colors">
+              <a href="#" className="text-gray-400 hover:text-hist-yellow transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="text-gray-400 hover:text-sapphire-400 transition-colors">
+              <a href="#" className="text-gray-400 hover:text-hist-yellow transition-colors">
                 Terms of Service
               </a>
-              <a href="#" className="text-gray-400 hover:text-sapphire-400 transition-colors">
+              <a href="#" className="text-gray-400 hover:text-hist-yellow transition-colors">
                 Sitemap
               </a>
             </div>

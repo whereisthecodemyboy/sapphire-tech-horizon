@@ -31,67 +31,68 @@ const Header = () => {
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${
         isScrolled 
-          ? 'bg-white shadow-sm border-b border-gray-100' 
+          ? 'bg-white shadow-lg border-b border-gray-100' 
           : 'bg-white/95 backdrop-blur-sm'
       }`}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="w-8 h-8 bg-sapphire-600 rounded-md flex items-center justify-center">
-              <span className="text-white font-bold text-sm">H</span>
+            <div className="w-12 h-12 bg-hist-blue rounded-xl flex items-center justify-center shadow-lg">
+              <span className="text-white font-bold text-xl font-allstar">H</span>
             </div>
             <div>
-              <h1 className="text-lg font-semibold text-sapphire-900">HIST</h1>
-              <p className="text-xs text-gray-500 leading-none">House of IT</p>
+              <h1 className="text-2xl font-bold text-hist-blue font-allstar">HIST</h1>
+              <p className="text-xs text-gray-600 leading-none font-medium">House of IT</p>
             </div>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-6">
+          <nav className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:text-sapphire-600 font-medium text-sm transition-colors duration-200"
+                className="text-gray-700 hover:text-hist-blue font-medium text-sm transition-colors duration-200 relative group"
               >
                 {item.name}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-hist-yellow group-hover:w-full transition-all duration-300"></span>
               </a>
             ))}
           </nav>
 
           {/* CTA Button & Mobile Menu Toggle */}
-          <div className="flex items-center space-x-3">
-            <Button size="sm" className="hidden sm:inline-flex bg-sapphire-600 hover:bg-sapphire-700 text-white">
+          <div className="flex items-center space-x-4">
+            <Button size="lg" className="hidden sm:inline-flex bg-hist-blue hover:bg-hist-blue-dark text-white px-6 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
               Free Consultation
             </Button>
             
             {/* Mobile menu button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="lg:hidden p-2 rounded-md text-gray-700 hover:text-sapphire-600 transition-colors"
+              className="lg:hidden p-3 rounded-lg text-gray-700 hover:text-hist-blue hover:bg-gray-50 transition-colors"
             >
-              {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t">
-            <nav className="container mx-auto px-4 py-4">
+          <div className="lg:hidden absolute top-full left-0 right-0 bg-white shadow-xl border-t border-gray-100">
+            <nav className="container mx-auto px-4 py-6">
               {navigation.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="block py-2 text-gray-700 hover:text-sapphire-600 font-medium transition-colors duration-200"
+                  className="block py-3 text-gray-700 hover:text-hist-blue font-medium transition-colors duration-200 border-b border-gray-100 last:border-b-0"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </a>
               ))}
-              <Button className="w-full mt-3 bg-sapphire-600 hover:bg-sapphire-700">
+              <Button className="w-full mt-4 bg-hist-blue hover:bg-hist-blue-dark text-white py-3 rounded-lg font-semibold shadow-lg">
                 Free Consultation
               </Button>
             </nav>

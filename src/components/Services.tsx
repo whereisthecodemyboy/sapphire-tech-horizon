@@ -66,15 +66,15 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-gradient-to-br from-sapphire-50 to-white">
+    <section id="services" className="py-20 bg-gradient-to-br from-hist-blue-50 to-white">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-16 animate-fade-in">
-          <div className="inline-flex items-center px-4 py-2 bg-sapphire-100 rounded-full text-sapphire-700 text-sm font-medium mb-6">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center px-4 py-2 bg-hist-yellow rounded-full text-hist-blue text-sm font-semibold mb-6">
             Our Services
           </div>
           
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 font-allstar">
             Comprehensive 
             <span className="text-gradient"> IT Solutions</span>
           </h2>
@@ -90,15 +90,14 @@ const Services = () => {
           {services.map((service, index) => (
             <Card 
               key={index} 
-              className="group hover:shadow-xl transition-all duration-300 border-0 hist-shadow hover:hist-glow animate-fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="group hover:shadow-xl transition-all duration-300 border-0 hist-shadow hover:hist-glow cursor-pointer"
             >
               <CardContent className="p-6">
-                <div className="w-12 h-12 bg-sapphire-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-sapphire-200 transition-colors">
+                <div className="w-12 h-12 bg-hist-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-hist-yellow transition-colors">
                   {typeof service.icon === 'string' ? (
                     <span className="text-2xl">{service.icon}</span>
                   ) : (
-                    <service.icon className="w-6 h-6 text-sapphire-600" />
+                    <service.icon className="w-6 h-6 text-hist-blue group-hover:text-hist-blue-dark" />
                   )}
                 </div>
                 
@@ -112,8 +111,8 @@ const Services = () => {
                 
                 <ul className="space-y-1">
                   {service.features.map((feature, idx) => (
-                    <li key={idx} className="text-xs text-sapphire-600 flex items-center">
-                      <div className="w-1 h-1 bg-sapphire-400 rounded-full mr-2"></div>
+                    <li key={idx} className="text-xs text-hist-blue flex items-center">
+                      <div className="w-1 h-1 bg-hist-yellow rounded-full mr-2"></div>
                       {feature}
                     </li>
                   ))}
@@ -124,8 +123,8 @@ const Services = () => {
         </div>
 
         {/* CTA */}
-        <div className="text-center animate-fade-in" style={{ animationDelay: '0.8s' }}>
-          <Button size="lg" className="bg-hist-gradient hover:shadow-lg transition-all duration-300">
+        <div className="text-center">
+          <Button size="lg" className="bg-hist-gradient hover:shadow-lg transition-all duration-300 px-8 py-3 text-white font-semibold">
             View All Services
           </Button>
         </div>
